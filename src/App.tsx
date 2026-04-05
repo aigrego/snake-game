@@ -26,7 +26,7 @@ function App() {
   const [score, setScore] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [gameStarted, setGameStarted] = useState(false)
-  const gameLoopRef = useRef<NodeJS.Timeout | null>(null)
+  const gameLoopRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const directionRef = useRef<Direction>('RIGHT')
 
   // 更新方向引用
